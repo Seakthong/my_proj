@@ -11,6 +11,7 @@ import 'result_page.dart';
 enum Gender { male, female }
 
 class InputPage extends StatefulWidget {
+  static String identity = 'input_page';
   InputPage({Key key}) : super(key: key);
 
   @override
@@ -140,9 +141,6 @@ class _InputPageState extends State<InputPage> {
                             this.weight.toString(),
                             style: kLargeLabelTextStyle,
                           ),
-                          SizedBox(
-                            height: 16.0,
-                          ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
@@ -181,9 +179,6 @@ class _InputPageState extends State<InputPage> {
                           Text(
                             this.age.toString(),
                             style: kLargeLabelTextStyle,
-                          ),
-                          SizedBox(
-                            height: 16.0,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,

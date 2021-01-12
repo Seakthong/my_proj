@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:my_proj/components/rounded_button_chat.dart';
 import 'package:my_proj/screens/flash_chat/login_screen.dart';
 import 'package:my_proj/screens/flash_chat/registration_screen.dart';
+import 'package:my_proj/screens/input_page.dart';
+import 'package:my_proj/screens/loading_screen.dart';
+import 'package:my_proj/screens/price_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   static String identity = 'welcome_screen';
@@ -34,7 +37,9 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   }
 
   void registrationFirebase() async {
+    print('this is called');
     await Firebase.initializeApp();
+    print('this is called end');
   }
 
   @override
@@ -62,7 +67,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                       print("Tap Event");
                     },
                     text: [
-                      "Mr. Xia Chat",
+                      "SQ Chat",
                     ],
                     textStyle: TextStyle(
                       fontSize: 45.0,
@@ -92,6 +97,30 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 Navigator.pushNamed(context, RegistrationScreen.identity);
               },
               title: 'Register',
+            ),
+            RoundedButtonChat(
+              color: Colors.purpleAccent,
+              onPressed: () {
+                //Go to registration screen.
+                Navigator.pushNamed(context, LoadingScreen.identity);
+              },
+              title: 'Weather App',
+            ),
+            RoundedButtonChat(
+              color: Colors.purpleAccent,
+              onPressed: () {
+                //Go to registration screen.
+                Navigator.pushNamed(context, PriceScreen.identity);
+              },
+              title: 'Price App',
+            ),
+            RoundedButtonChat(
+              color: Colors.purpleAccent,
+              onPressed: () {
+                //Go to registration screen.
+                Navigator.pushNamed(context, InputPage.identity);
+              },
+              title: 'BMI App',
             ),
           ],
         ),

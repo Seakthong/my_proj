@@ -8,6 +8,7 @@ import 'package:my_proj/services/weather.dart';
 const String owKey = 'fc786e9d19e17f7a2f9f79962ec9ff8f';
 
 class LoadingScreen extends StatefulWidget {
+  static String identity = 'loading_screen';
   LoadingScreen({Key key}) : super(key: key);
 
   @override
